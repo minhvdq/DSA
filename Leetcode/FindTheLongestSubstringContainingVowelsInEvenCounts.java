@@ -3,6 +3,9 @@ package Leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Leetcode 1371: FindTheLongestSubstringContainingVowelsInEvenCounts
+ */
 public class FindTheLongestSubstringContainingVowelsInEvenCounts {
     // u a e o i
     int[] cur = {0, 0, 0, 0, 0};
