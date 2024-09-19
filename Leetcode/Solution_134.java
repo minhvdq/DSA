@@ -2,7 +2,7 @@ package Leetcode;
 /*
  * Leetcode 134: Gas Station
  */
-class GasStation {
+class Solution_134 {
     public static void main( String[] args ){
         System.err.println("asdad");
     }
