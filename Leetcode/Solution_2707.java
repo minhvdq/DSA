@@ -92,6 +92,4 @@ public class Solution_2707 {
             neighbors.put( node.c, node);
         }
     }
-} {
-    
 }
