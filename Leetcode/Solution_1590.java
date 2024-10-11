@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 1590: Make Sum Divisible by P
  */
-class Solution_1590 {
+class Solution_1590 {   
     public int minSubarray(int[] nums, int p) {
         int totalRem = 0;
         Map<Integer, Integer> nearestInd = new HashMap<>();
