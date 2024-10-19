@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Leetcode 632. Smallest Range Covering Elements from K Lists
  */
-public class Solution {
+public class Solution_632 {
     int[] indices;
     int minIndex = 0;
     int[] range = {0, Integer.MAX_VALUE};
