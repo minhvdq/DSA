@@ -9,7 +9,7 @@ public class optimizedcheating {
 		long k = scanner.nextLong();
 		
 		Set<Long> set = new HashSet<>();
-		Map<Long, String> map= new HashMap<>();
+		Map<Long, List<Integer>> map= new HashMap<>();
 		
 		List<Character> ops = new ArrayList<>();
 		List<Long> vals = new ArrayList<>();
@@ -32,14 +32,14 @@ public class optimizedcheating {
 		}
 		
 		q.add(curr);
-		map.put(curr, "");
+		map.put(curr, new ArrayList<>());
 		while( !q.isEmpty() ) {
 			long top = q.poll();
 			if(!set.contains(top) ) {
-				String str = map.get(top);
-				System.out.println(str.length());
-				for ( int i = 0; i < str.length(); i ++ ) {
-					System.out.println(str.charAt(i));
+				List<Integer> str = map.get(top);
+				System.out.println(str.size());
+				for ( int i = 0; i < str.size(); i ++ ) {
+					System.out.println(str.get(i));
 				}
 				return;
 			}
@@ -55,9 +55,9 @@ public class optimizedcheating {
 				}
 				
 				int ind = i + 1;
-				String str = new String(map.get(top));
-				str += ind;
-				map.put(result, str);
+				List<Integer> list = new ArrayList<>(map.get(top));
+				list.add(ind);
+				map.put(result, list);
 				q.add(result);
 			}
 		}
@@ -70,11 +70,8 @@ public class optimizedcheating {
 			return a - b;
 		} else if( op == '*' ) {
 			return a * b;
-		} else if( op == '/' ) {
-			long returnVal = a / b;
-			return returnVal;
+		} else{
+			return a / b;
 		}
-		
-		return a;
 	}
 }
